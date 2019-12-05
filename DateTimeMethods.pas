@@ -25,7 +25,7 @@ function f(p:DateTime):DateTime:=new DateTime(1,p.Month,p.Day);
 
 function LaterInYear(p1, p2: DateTime): DateTime := f(p1)>f(p2)?p1:p2;
 
-function DaysInYear(year: integer): integer := 0;
+function DaysInYear(year: integer): integer;
 
 function DaysInYearRange(year1, year2: integer): integer := 0;
 
