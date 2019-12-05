@@ -19,11 +19,11 @@ begin
   end;
 end;
 
-{function f(p:DateTime):DateTime:=new DateTime(1,1,1,p.Hour,p.Minute,p.Second);
+function f(p:DateTime):DateTime:=new DateTime(1,p.Month,p.Day);
 
-function LaterInDay(p1, p2: DateTime): DateTime:=f(p1)>f(p2)?p1:p2;}
+//function LaterInDay(p1, p2: DateTime): DateTime:=f(p1)>f(p2)?p1:p2;
 
-function LaterInYear(p1, p2: DateTime): DateTime := p1;
+function LaterInYear(p1, p2: DateTime): DateTime := f(p1)>f(p2)?p1:p2;
 
 function DaysInYear(year: integer): integer := 0;
 
@@ -32,5 +32,5 @@ function DaysInYearRange(year1, year2: integer): integer := 0;
 function SecondsInHours(hours: integer): integer := 0;
 
 begin
-
+   
 end. 

@@ -11,7 +11,7 @@ begin
 	
 end;
 
-{procedure TestDaysInMonth();
+procedure TestDaysInMonth();
 begin
 	assert(DaysInMonth(1, 1999) = 31, 'TestDaysInMonth fails on Janyary 1999');
 	assert(DaysInMonth(2, 2004) = 29, 'TestDaysInMonth fails on February 2004');
@@ -20,7 +20,7 @@ begin
 	println('тесты пройдены ');
 end;
 
-procedure TestLaterInDay();
+{procedure TestLaterInDay();
 begin
 	var p1 := new DateTime(2019, 11, 21, 14, 12, 10);
 	var p2 := new DateTime(2019, 11, 11, 15, 12, 10);
@@ -31,8 +31,8 @@ begin
 	assert(LaterInDay(p1, p3) = p3, 'TestLaterInDay fails on 14:12:10 and 14:20:10');
 	assert(LaterInDay(p4, p1) = p4, 'TestLaterInDay fails on 14:12:10 and 14:12:44');
 	println('тесты пройдены ');
-end;}
-
+end;
+}
 procedure TestrLaterInYear();
 begin
 	var p1 := new DateTime(1999, 11, 21);
@@ -42,6 +42,7 @@ begin
 	assert(LaterInYear(p2, p1) = p1, 'TestLaterInYear fails on 21.11 and 11.7');
 	assert(LaterInYear(p2, p3) = p2, 'TestLaterInYear fails on 20.2 and 11.7');
 	assert(LaterInYear(p3, p1) = p1, 'TestLaterInYear fails on 21.11 and 20.2');
+	println('тесты пройдены ');
 end;
 
 procedure TestDaysInYear();
@@ -69,6 +70,7 @@ end;
 
 begin
 	TestIsLeapYear;
-	//TestDaysInMonth;
+  TestDaysInMonth;
+  TestrLaterInYear;
 	//TestLaterInDay
 end.
