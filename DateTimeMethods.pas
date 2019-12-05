@@ -7,7 +7,7 @@ begin
     Result := True;  
 end;
 
-{function DaysInMonth(month, year: integer): integer;
+function DaysInMonth(month, year: integer): integer;
 begin
   case month of
     1,3,5,7,8,10,12:result:=31;
@@ -19,7 +19,7 @@ begin
   end;
 end;
 
-function f(p:DateTime):DateTime:=new DateTime(1,1,1,p.Hour,p.Minute,p.Second);
+{function f(p:DateTime):DateTime:=new DateTime(1,1,1,p.Hour,p.Minute,p.Second);
 
 function LaterInDay(p1, p2: DateTime): DateTime:=f(p1)>f(p2)?p1:p2;}
 
