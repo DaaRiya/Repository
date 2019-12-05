@@ -11,7 +11,7 @@ begin
 	
 end;
 
-procedure TestDaysInMonth();
+{procedure TestDaysInMonth();
 begin
 	assert(DaysInMonth(1, 1999) = 31, 'TestDaysInMonth fails on Janyary 1999');
 	assert(DaysInMonth(2, 2004) = 29, 'TestDaysInMonth fails on February 2004');
@@ -31,7 +31,7 @@ begin
 	assert(LaterInDay(p1, p3) = p3, 'TestLaterInDay fails on 14:12:10 and 14:20:10');
 	assert(LaterInDay(p4, p1) = p4, 'TestLaterInDay fails on 14:12:10 and 14:12:44');
 	println('тесты пройдены ');
-end;
+end;}
 
 procedure TestrLaterInYear();
 begin
@@ -69,6 +69,6 @@ end;
 
 begin
 	TestIsLeapYear;
-	TestDaysInMonth;
-	TestLaterInDay
+	//TestDaysInMonth;
+	//TestLaterInDay
 end.

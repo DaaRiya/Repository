@@ -19,9 +19,9 @@ begin
   end;
 end;
 
-function f(p:DateTime):DateTime:=new DateTime(1,1,1,p.Hour,p.Minute,p.Second);
+{function f(p:DateTime):DateTime:=new DateTime(1,1,1,p.Hour,p.Minute,p.Second);
 
-function LaterInDay(p1, p2: DateTime): DateTime:=f(p1)>f(p2)?p1:p2;
+function LaterInDay(p1, p2: DateTime): DateTime:=f(p1)>f(p2)?p1:p2;}
 
 function LaterInYear(p1, p2: DateTime): DateTime := p1;
 
