@@ -3,7 +3,7 @@
 function IsLeapYear(year: integer): boolean;
 begin
   Result := false;
-  if year mod 4 = 0 then
+  if ((year mod 4 = 0)and (year mod 100<>0))or (year mod 400=0) then
     Result := True;  
 end;
 
